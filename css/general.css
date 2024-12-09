@@ -1,0 +1,61 @@
+@font-face {
+    font-family: Orbitron;
+    src: url(../fonts/Orbitron/Orbitron-VariableFont_wght.ttf);
+}
+/* Headings */
+@font-face {
+    font-family: Oswald;
+    src: url(../fonts/Oswald/Oswald-VariableFont_wght.ttf);
+}
+/* Body */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Oswald", sans-serif;
+}
+
+:root {
+    /* COLORS */
+    /* Primary */
+    --color-ptrimary-dark: #461E5C;
+    --color-primary: #72369D;
+    --color-primary-light: #9D4EDD;
+    --color-primary-very-light: #B67BE6;
+    --color-primary-super-light: #CEA7EE;
+    /* Secondary */
+    --color-secondary-dark: #F56A00;
+    --color-secondary: #FA8B01;
+    --color-secondary-light: #FFAD03;
+    --color-secondary-very-light: #FFC243;
+    --color-secondary-super-light: #FFCF70;    
+
+    /* TYPOGRAPHY */
+    /* Headings */
+    --h1: 6.4rem;
+    --h1-line: 7.6rem;
+    --h2: 3.6rem;
+    --h2-line: 4.4rem;
+    --h3: 2.8rem;
+    --h3-line: 3.6rem;
+    --h4: 2.0rem;
+    --h4-line: 2.8rem;
+    /* Body */
+    --body-1: 1.8rem;
+    --body-1-line: 2.8rem;
+    --body-2: 1.6rem;
+    --body-2-line: 2.4rem;
+    --body-3: 1.4rem;
+    --body-3-line: 2.0rem;
+    --body-4: 1.2rem;
+    --body-4-line: 1.6rem;
+
+    /* SHADOWS */
+    /* MARGINS */
+}
