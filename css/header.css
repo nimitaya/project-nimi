@@ -70,25 +70,28 @@ html {
 
 /* HEADER */
 header {
+    background-color: var(--color-primary-dark);
+    padding: var(--padding-sections);
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--padding-sections);
-    background-color: var(--color-primary-dark);
 }
 
 header div {
+    max-width: 144rem;
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    max-width: 144rem;
 }
 
 header div a:first-child {
-    width: 100%;
     min-height: 10rem;
     overflow: hidden;
+    width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,6 +104,9 @@ a img {
 }
 
 h1 {
+    color: var(--color-primary-super-light);
+    margin-top: var(--margin-small);
+
     font-family: "Orbitron", sans-serif;
     font-weight: bold;
     font-size: var(--h1);
@@ -108,47 +114,107 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.4rem;
-    color: var(--color-primary-super-light);
-    margin-top: var(--margin-small);
 }
 
-/* NAVBAR */
-nav {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: var(--margin-small);
-}
-
-.main-nav {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: var(--color-primary-light);
-    border-radius: 1.6rem;
-}
-
-nav li {
-    font-family: "Orbitron", sans-serif;
-    font-size: var(--body-1);
-    line-height: var(--body-1-line);
-    letter-spacing: 0.1rem;
-    padding: var(--padding-text);
-}
-
-/* hide these ul for mobile */
-.nav-outline, .nav-characters {
-    display: none;
+header a {
+    text-decoration: none;
 }
 
 header p {
+    color: var(--color-primary-super-light);
+    margin-top: var(--margin-small);
+
     font-family: "Oswald", sans-serif;
     font-size: var(--h4);
     line-height: var(--h4-line);
     text-align: center;
-    color: var(--color-primary-super-light);
+}
+
+/* NAVBAR */
+nav {
     margin-top: var(--margin-small);
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-nav {
+    background-color: var(--color-primary-light);
+    border-radius: 1.6rem;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    box-shadow: rgba(50, 50, 93, 0.65) 0px 50px 100px -20px, 
+    rgba(0, 0, 0, 0.7) 0px 30px 60px -30px, 
+    #0a254059 0px -2px 6px 0px inset;
+}
+
+nav li, nav a {
+    color: var(--color-primary-dark);
+    
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: var(--body-1);
+    line-height: var(--body-1-line);
+    letter-spacing: 0.1rem;
+}
+
+nav li {
+    padding: var(--padding-text);
+}
+
+nav a:hover {
+    color: var(--color-secondary-dark);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* hide these ul for mobile */
+.add-nav-outline, .add-nav-characters {
+    display: none;
+}
+
+/* ========================================================== */
+/* Media Queries */
+@media (min-width: 768px) {
+    /* Navbar for bigger screens in row */
+    .main-nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* show the secondary menus on hover in bigger screens */
+    .main-nav-outline:hover .add-nav-outline, .main-nav-characters:hover .add-nav-characters {
+        background-color: var(--color-secondary-light);
+        border-radius: 1.6rem;
+        width: 204%;
+
+        display: block;
+        overflow: hidden;
+        position: absolute;
+        top: 90%;
+
+        box-shadow: #F56A0066 0px 2px 4px, 
+        #F56A004d 0px 7px 13px -3px, 
+        #F56A0033 0px -3px 0px inset;
+    }
+
+    .main-nav-outline, .main-nav-characters {
+        position: relative;
+    }
+
+    .add-nav-outline > li:hover, .add-nav-characters > li:hover {
+        background-color: var(--color-secondary-dark);
+
+    }
+    .add-nav-outline > li:hover a, .add-nav-characters > li:hover a {
+        color: var(--color-secondary-super-light);
+        text-decoration: none;
+    }
 }
