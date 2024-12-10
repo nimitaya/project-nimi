@@ -62,8 +62,63 @@ html {
     --margin-text: 0.8rem;
 
     /* PADDINGS */
+    --padding-more-space: 4.8rem;
     --padding-sections: 2.4rem;
     --padding-text: 1.6rem;
 }
 
 /* ========================================================== */
+
+/* FOOTER */
+footer {
+    background-color: var(--color-primary-dark);
+    color: var(--color-primary-super-light);
+    font-size: var(--body-2);
+    line-height: var(--body-2-line);
+    padding: var(--padding-more-space);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info, .footer-picture, .footer-links {
+    margin: var(--margin-small);
+}
+
+footer li {
+    margin: var(--margin-text);
+}
+
+footer a {
+    color: var(--color-secondary-super-light);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--color-prima);
+}
+
+/* Only a tags with target="_blank" */
+footer a[target="_blank"]::after {
+    color: var(--color-secondary-super-light);
+    content: "\f14d";
+    font-family: "fontawesome";
+    margin-left: var(--margin-text);
+}
+
+footer img {
+    width: 15rem;
+}
+
+/* ========================================================== */
+/* Media Queries */
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
