@@ -35,6 +35,8 @@ html {
     --color-secondary-light: #FFAD03;
     --color-secondary-very-light: #FFC243;
     --color-secondary-super-light: #FFCF70;    
+    /* Linear Gradient */
+    --gradient-background-dark: linear-gradient(90deg, #2a1237 0%, #461e5c 15%, #461e5c 85%, #2a1237 100%);
 
     /* TYPOGRAPHY */
     /* Headings */
@@ -58,19 +60,22 @@ html {
 
     /* SHADOWS */
     /* MARGINS */
+    --margin-more-space: 4.8rem;
     --margin-small: 2rem;
     --margin-text: 0.8rem;
 
     /* PADDINGS */
+    --padding-more-space: 4.8rem;
     --padding-sections: 2.4rem;
     --padding-text: 1.6rem;
 }
 
 /* ========================================================== */
 
-/* HEADER */
+/* ===== HEADER ===== */
 header {
     background-color: var(--color-primary-dark);
+    background: var(--gradient-background-dark);
     padding: var(--padding-sections);
 
     display: flex;
@@ -87,7 +92,8 @@ header div {
     align-items: center;
 }
 
-header div a:first-child {
+/* Header Image */
+.header-img-container {
     min-height: 10rem;
     overflow: hidden;
     width: 100%;
@@ -97,11 +103,12 @@ header div a:first-child {
     align-items: center;
 }
 
-a img {
+header a img {
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
+/* End Header Image */
 
 h1 {
     color: var(--color-primary-super-light);
@@ -130,7 +137,7 @@ header p {
     text-align: center;
 }
 
-/* NAVBAR */
+/* ===== NAVBAR ===== */
 nav {
     margin-top: var(--margin-small);
     width: 100%;
@@ -155,6 +162,12 @@ nav {
     #0a254059 0px -2px 6px 0px inset;
 }
 
+.nav-outline::after, .nav-characters::after {
+    content: "\f103";
+    font-family: "fontawesome";
+    margin-left: var(--margin-text);
+}
+
 nav li, nav a {
     color: var(--color-primary-dark);
     
@@ -165,14 +178,15 @@ nav li, nav a {
     letter-spacing: 0.1rem;
 }
 
-nav li {
+/* Nav a has Padding and Block, so not only text is clickable and hover changes more than text */
+nav a {
     padding: var(--padding-text);
+    display: block;
 }
 
 nav a:hover {
-    color: var(--color-secondary-dark);
+    background-color: var(--color-secondary-dark);
     cursor: pointer;
-    text-decoration: underline;
 }
 
 /* hide these ul for mobile */
@@ -192,6 +206,7 @@ nav a:hover {
     /* show the secondary menus on hover in bigger screens */
     .main-nav-outline:hover .add-nav-outline, .main-nav-characters:hover .add-nav-characters {
         background-color: var(--color-secondary-light);
+        background: linear-gradient(90deg, #FA8B01 0%, #FFAD03 15%, #FFAD03 85%, #FA8B01 100%);;
         border-radius: 1.6rem;
         width: 204%;
 

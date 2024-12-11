@@ -35,6 +35,8 @@ html {
     --color-secondary-light: #FFAD03;
     --color-secondary-very-light: #FFC243;
     --color-secondary-super-light: #FFCF70;    
+    /* Linear Gradient */
+    --gradient-background-dark: linear-gradient(90deg, #2a1237 0%, #461e5c 15%, #461e5c 85%, #2a1237 100%);
 
     /* TYPOGRAPHY */
     /* Headings */
@@ -58,10 +60,12 @@ html {
 
     /* SHADOWS */
     /* MARGINS */
+    --margin-more-space: 4.8rem;
     --margin-small: 2rem;
     --margin-text: 0.8rem;
 
     /* PADDINGS */
+    --padding-more-space: 4.8rem;
     --padding-sections: 2.4rem;
     --padding-text: 1.6rem;
 }
