@@ -35,6 +35,8 @@ html {
     --color-secondary-light: #FFAD03;
     --color-secondary-very-light: #FFC243;
     --color-secondary-super-light: #FFCF70;    
+    /* Linear Gradient */
+    --gradient-background-dark: linear-gradient(90deg, #2a1237 0%, #461e5c 15%, #461e5c 85%, #2a1237 100%);
 
     /* TYPOGRAPHY */
     /* Headings */
@@ -58,6 +60,7 @@ html {
 
     /* SHADOWS */
     /* MARGINS */
+    --margin-more-space: 4.8rem;
     --margin-small: 2rem;
     --margin-text: 0.8rem;
 
@@ -69,9 +72,10 @@ html {
 
 /* ========================================================== */
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer {
     background-color: var(--color-primary-dark);
+    background: var(--gradient-background-dark);
     color: var(--color-primary-super-light);
     font-size: var(--body-2);
     line-height: var(--body-2-line);
@@ -87,6 +91,10 @@ footer {
 
 .footer-info, .footer-picture, .footer-links {
     margin: var(--margin-small);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 footer li {
@@ -99,7 +107,7 @@ footer a {
 }
 
 footer a:hover {
-    color: var(--color-prima);
+    color: var(--color-secondary-dark);
 }
 
 /* Only a tags with target="_blank" */
@@ -110,8 +118,36 @@ footer a[target="_blank"]::after {
     margin-left: var(--margin-text);
 }
 
+footer a[target="_blank"]:hover::after {
+    color: var(--color-secondary-dark);
+}
+
+
+/* ===== Footer Sections ===== */
+.footer-info {
+    border-bottom: 2px solid var(--color-primary-very-light);
+}
+
+/* Button Effect */
+.footer-picture {
+    border-radius: 50%;
+    box-shadow:  15px 15px 50px #2a1237,
+             -15px -15px 50px #622a81;
+    transition: all 0.5s;
+}
+/* Pressed Button Effect */
+.footer-picture:hover {
+    box-shadow: inset 15px 15px 50px #2a1237,
+            inset -15px -15px 50px #622a81;
+}
+
 footer img {
     width: 15rem;
+    padding: var(--padding-text);
+}
+
+.footer-links {
+    border-top: 2px solid var(--color-primary-very-light);
 }
 
 /* ========================================================== */
@@ -120,5 +156,20 @@ footer img {
     .footer-container {
         flex-direction: row;
         justify-content: space-around;
+    }
+
+    /* Border and Padding Change */
+    .footer-info {
+        border-bottom: none;
+        border-right: 2px solid var(--color-primary-very-light);
+        padding-right: var(--padding-sections);
+        height: 18.8rem;
+    }
+
+    .footer-links {
+        border-top: none;
+        border-left: 2px solid var(--color-primary-very-light);
+        padding-left: var(--padding-sections);
+        height: 18.8rem;
     }
 }
