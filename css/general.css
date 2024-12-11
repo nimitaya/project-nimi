@@ -76,7 +76,7 @@ html {
 main {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     min-height: 100vh;
     background-image: var(--gradient-background-dark);
@@ -92,8 +92,48 @@ section {
 h2 {
     font-size: var(--h2);
     line-height: var(--h2-line);
-    padding: var(--padding-text);
+    margin: var(--margin-text);
 }
  h2, p {
-    margin: var(--margin-text);
+    padding: var(--padding-text) 0;
  }
+
+ h2, a {
+    color: var(--color-secondary-super-light);
+ }
+
+ p, a {
+    font-size: var(--body-2);
+    line-height: var(--body-2-line);
+ }
+
+ a {
+    text-decoration: none;
+    /* Nesting for only target blank a tags */
+    &[target="_blank"]::after {
+        color: var(--color-secondary-super-light);
+        content: "\f14d";
+        font-family: "fontawesome";
+        font-size: var(--body-3);
+        margin-left: var(--margin-text);
+        }
+ }
+
+/* ========================================================== */
+/* Media QUeries */
+
+@media (min-width: 768px) {
+    section {
+        max-width: 65%;
+        margin: auto;
+    }
+
+    h2 {
+        border-bottom: 1px solid var(--color-secondary-super-light);
+    }
+
+    p, a {
+        font-size: var(--body-1);
+        line-height: var(--body-1-line);
+     }
+}
