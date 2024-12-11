@@ -42,12 +42,12 @@ html {
     /* Headings */
     --h1: 5.6rem;
     --h1-line: 6.8rem;
-    --h2: 3.6rem;
-    --h2-line: 4.4rem;
-    --h3: 2.8rem;
-    --h3-line: 3.6rem;
-    --h4: 2.0rem;
-    --h4-line: 2.8rem;
+    --h2: 3.2rem;
+    --h2-line: 4rem;
+    --h3: 2.4rem;
+    --h3-line: 3.2rem;
+    --h4: 2rem;
+    --h4-line: 2.4rem;
     /* Body */
     --body-1: 1.8rem;
     --body-1-line: 2.8rem;
