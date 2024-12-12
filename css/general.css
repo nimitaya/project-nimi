@@ -90,8 +90,11 @@ section {
 
 /* Text Styling */
 h2 {
+    font-family: "Orbitron", sans-serif;
     font-size: var(--h2);
     line-height: var(--h2-line);
+
+    border-bottom: 1px solid var(--color-secondary-super-light);
     margin: var(--margin-text);
 }
  h2, p {
@@ -126,10 +129,6 @@ h2 {
     section {
         max-width: 65%;
         margin: auto;
-    }
-
-    h2 {
-        border-bottom: 1px solid var(--color-secondary-super-light);
     }
 
     p, a {
