@@ -105,7 +105,7 @@ h2 {
     color: var(--color-secondary-super-light);
  }
 
- p, a {
+ p, a, aside {
     font-size: var(--body-2);
     line-height: var(--body-2-line);
  }
@@ -126,13 +126,30 @@ h2 {
 /* Media QUeries */
 
 @media (min-width: 768px) {
-    section {
-        max-width: 65%;
-        margin: auto;
-    }
-
     p, a {
         font-size: var(--body-1);
         line-height: var(--body-1-line);
-     }
+    }
+    
+}
+
+@media (min-width: 1024px) {
+    section {
+        max-width: 70%;
+        margin: auto;
+    }
+
+    .char-cards {
+        display: flex;
+    }
+}
+
+/* Text length divided in two parts for easier reading */
+@media (min-width: 1280px) {
+    .divided-textbox {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: var(--margin-more-space);
+        margin-bottom: var(--margin-small);
+    }
 }
