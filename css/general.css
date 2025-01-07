@@ -110,7 +110,7 @@ h2 {
     line-height: var(--body-2-line);
  }
 
- a {
+ main a {
     text-decoration: none;
     /* Nesting for only target blank a tags */
     &[target="_blank"]::after {
@@ -120,7 +120,26 @@ h2 {
         font-size: var(--body-3);
         margin-left: var(--margin-text);
         }
+
+    &:hover, &[target="_blank"]:hover::after {
+        color: var(--color-secondary-dark);
+    }
  }
+
+/* Picture Styling */
+figure img {
+    width: 200px;
+    height: 200px;
+    clip-path: circle(50% at 50% 50%);
+}
+
+/* Specific Section Styling */
+.char-cards figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: var(--margin-more-space);
+}
 
 /* ========================================================== */
 /* Media QUeries */
@@ -131,6 +150,12 @@ h2 {
         line-height: var(--body-1-line);
     }
     
+    .char-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: var(--margin-small);
+    }
 }
 
 @media (min-width: 1024px) {
@@ -139,9 +164,6 @@ h2 {
         margin: auto;
     }
 
-    .char-cards {
-        display: flex;
-    }
 }
 
 /* Text length divided in two parts for easier reading */
