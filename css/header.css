@@ -116,8 +116,8 @@ h1 {
 
     font-family: "Orbitron", sans-serif;
     font-weight: bold;
-    font-size: var(--h1);
-    line-height: var(--h1-line);
+    font-size: var(--h2);
+    line-height: var(--h2-line);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.4rem;
@@ -197,6 +197,11 @@ nav a:hover {
 /* ========================================================== */
 /* Media Queries */
 @media (min-width: 768px) {
+    h1 {
+        font-size: var(--h1);
+        line-height: var(--h1-line);
+    }
+
     /* Navbar for bigger screens in row */
     .main-nav {
         display: flex;
